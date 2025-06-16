@@ -48,6 +48,17 @@ require("lazy").setup({
     {"L3MON4D3/LUASnip"},  --snippet engine
     {"saadparwaiz1/cmp_luasnip" }, -- lua snip to integrate nvim-cmp
 
+    --git indicators in sign column
+    {"lewis6991/gitsigns.nvim"},
+
+    --keybinding helper
+    {"folke/which-key.nvim" },
+
+    --terminal 
+    { "akinsho/toggleterm.nvim",version="*",config = true },
+
+
+
 })
 
 

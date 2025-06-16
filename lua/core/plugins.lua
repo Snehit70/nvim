@@ -56,8 +56,16 @@ require("lazy").setup({
 
     --terminal 
     { "akinsho/toggleterm.nvim",version="*",config = true },
-
-
+    
+    --markdown preview
+    {
+    "iamcco/markdown-preview.nvim",
+    ft = { "markdown" },
+    build = "cd app && npm install ",
+    config = function()
+        vim.g.mkdp_auto_start = 0
+    end,
+    },
 
 })
 

@@ -13,4 +13,9 @@ vim.keymap.set("n","<leader>tf","<cmd>ToggleTerm direction=float<CR>", { desc = 
 --toggle terminal vetically with <leader>tv
 vim.keymap.set("n","<leader>tv","<cmd>ToggleTerm direction=vertical<CR>", { desc = "Toggle  vertical terminal" })
 
+--make <ESC> work lik ctrl-\ ctrl-n in terminal mode
+vim.keymap.set("t","<Esc>", [[<C-\><C-n>]], {desc = "Exit terminal mode"})
 
+
+--keymap for markdown preview
+vim.keymap.set("n","<leader>mp","<cmd>MarkdownPreviewToggle<CR>", {desc = "Toggle Markdown Preview" })

@@ -29,3 +29,16 @@ vim.keymap.set("n","<Leader>bc",":bdelete<CR>", { desc ="Close buffer"})
 --window manangement keymaps
 vim.keymap.set("n","<leader>wm", ":WinShift<CR>", {desc ="Enter window move mode "})
 
+
+
+--copilot chat keymaps
+vim.keymap.set("n","<leader>cc", "<cmd>CopilotChat<CR>", {desc ="Open Copilot Chat"})
+vim.keymap.set("v","<leader>ce", "<cmd>CopilotChatExplain<CR>", {desc ="Explain selected code"})
+vim.keymap.set("v","<leader>cr", "<cmd>CopilotChatReview<CR>", {desc ="Review selected code"})
+vim.keymap.set("v","<leader>cf", "<cmd>CopilotChatFix<CR>", {desc ="Fix selected code"})
+vim.keymap.set("v","<leader>co", "<cmd>CopilotChatOptimize<CR>", {desc ="Optimized selected code"})
+
+
+
+
+

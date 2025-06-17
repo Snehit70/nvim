@@ -26,4 +26,4 @@ require("plugins.gitsigns")
 require("plugins.which-key")
 require("plugins.bufferline")
 require("plugins.winshift")
-
+require("plugins.copilot")

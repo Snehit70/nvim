@@ -81,7 +81,36 @@ require("lazy").setup({
     {"hrsh7th/cmp-buffer"}, -- complete from text in current buffer
     {"hrsh7th/cmp-path" }, -- complete file paths
     {"hrsh7th/cmp-cmdline"}, -- complte neovim commands
-
+    
+    --Github copilot support
+    {
+        "zbirenbaum/copilot.lua",
+        cmd = "Copilot",
+        event = "InsertEnter",
+        config = function ()
+            require("copilot").setup({})
+        end,
+    }, 
+     --copilot chat interface
+    {
+        "CopilotC-Nvim/CopilotChat.nvim",
+        branch = "main",
+        dependencies = {
+            {"zbirenbaum/copilot.lua" },
+            {"nvim-lua/plenary.nvim" },
+        },
+        config = function ()
+            require("CopilotChat").setup({})
+        end,
+    }, 
+    --copilot completion source for nvim-cmp
+    {
+        "zbirenbaum/copilot-cmp",
+        dependencies = {"zbirenbaum/copilot.lua" },
+        config = function ()
+            require("copilot_cmp").setup()
+        end,
+    },
 })
 
 

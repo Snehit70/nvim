@@ -14,6 +14,7 @@
 │       ├── bufferline.lua
 │       ├── cmp.lua
 │       ├── colorscheme.lua
+│       ├── copilot.lua
 │       ├── gitsigns.lua
 │       ├── lsp.lua
 │       ├── lualine.lua

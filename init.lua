@@ -24,3 +24,6 @@ require("plugins.lsp")
 require("plugins.cmp")
 require("plugins.gitsigns")
 require("plugins.which-key")
+require("plugins.bufferline")
+require("plugins.winshift")
+

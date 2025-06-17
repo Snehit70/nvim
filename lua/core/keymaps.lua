@@ -19,3 +19,13 @@ vim.keymap.set("t","<Esc>", [[<C-\><C-n>]], {desc = "Exit terminal mode"})
 
 --keymap for markdown preview
 vim.keymap.set("n","<leader>mp","<cmd>MarkdownPreviewToggle<CR>", {desc = "Toggle Markdown Preview" })
+
+
+--buffer navigation keymaps
+vim.keymap.set("n","<Leader>bn",":BufferLineCycleNext<CR>", { desc ="Next buffer"})
+vim.keymap.set("n","<Leader>bp",":BufferLineCyclePrev<CR>", { desc =" Previous buffer"})
+vim.keymap.set("n","<Leader>bc",":bdelete<CR>", { desc ="Close buffer"})
+
+--window manangement keymaps
+vim.keymap.set("n","<leader>wm", ":WinShift<CR>", {desc ="Enter window move mode "})
+

@@ -29,7 +29,7 @@ require("lazy").setup({
     {"nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate"
     },
-    -- thsi does the status line thing
+    -- this does the status line thing
     {
         "nvim-lualine/lualine.nvim",
         dependencies = { "nvim-tree/nvim-web-devicons"}, --optional
@@ -67,6 +67,23 @@ require("lazy").setup({
     end,
     },
 
+    --json schema support
+    {"b0o/schemastore.nvim"},
+
+    --buffer management with visual tabs
+    {"akinsho/bufferline.nvim",
+        dependencies = "nvim-tree/nvim-web-devicons" },
+
+    --window management for moving windows around
+    {"sindrets/winshift.nvim" },
+
+    --additional completion sources
+    {"hrsh7th/cmp-buffer"}, -- complete from text in current buffer
+    {"hrsh7th/cmp-path" }, -- complete file paths
+    {"hrsh7th/cmp-cmdline"}, -- complte neovim commands
+
 })
+
+
 
 

@@ -14,9 +14,28 @@ cmp.setup({
       ["<CR>"] = cmp.mapping.confirm({ select = true }),
     }),
     sources = {
-        { name = "nvim_lsp" },
-        { name = "luasnip" }
+        { name = "nvim_lsp" }, --lsp completions (highest priority
+        { name = "luasnip" },  -- snippet completions
+        { name = "buffer" },   -- text from current buffer
+        { name = "path" },     --file path completions
     },
+})
+
+--setup cmdline completions for '/' (search)
+cmp.setup.cmdline('/',{
+    mapping = cmp.mapping.preset.cmdline(),
+    sources = {
+        { name = 'buffer' }
+    }
+})
+
+--setup cmdlien completion for ':' (commands)
+cmp.setup.cmdline(':',{
+    mapping = cmp.mapping.preset.cmdline(),
+    sources = {
+        { name = 'path' },
+        { name = 'cmdline' }
+    }
 })
 
 

@@ -45,16 +45,15 @@ require("copilot").setup({
 local copilot_enabled = true
 function ToggleCopilot()
     if copilot_enabled then
-        require("copilot.suggestion").toggle_auto_trigger()
+        vim.cmd("Copilot disable")
         copilot_enabled = false
-        print("Copilot suggestion disabled")
+        print("Copilot disabled")
     else
-        require("copilot.suggestion").toggle_auto_trigger()
-        copilot_enabled =true
-        print("Copilot suggestion enabled")
+        vim.cmd("Copilot enable")
+        copilot_enabled = true
+        print("Copilot enabled")
     end
 end
-
 --keymap to toggle copilot
 vim.keymap.set("n","<leader>ct",ToggleCopilot,{ desc = "Toggle Copilot suggestions"})
 

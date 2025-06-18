@@ -111,6 +111,37 @@ require("lazy").setup({
             require("copilot_cmp").setup()
         end,
     },
+
+    --Visual indentation guides
+    {
+        "lukas-reineke/indent-blankline.nvim",
+        main = "ibl",
+        opts = {
+            indent = {
+                char = "|",
+                tab_char ="|",
+            },
+            scope = {
+                enabled = true,
+                show_start = true,
+                show_end = false,
+                injected_languages =false,
+                highlight = {"Function","Label" },
+                priority = 500,
+            },
+        },
+    },
+    --autopairs for brackets and quotes
+    {"windwp/nvim-autopairs",
+        event ="InsertEnter",
+    },
+
+    --auto close and rename html/jsx tags
+    {
+        "windwp/nvim-ts-autotag",
+        ft = {"html", "javascript", "javascriptreact", "typescriptreact",
+        "vue", "svelte", "astro", "markdown","tsx","jsx" },
+    },
 })
 
 

@@ -17,8 +17,8 @@ vim.opt.rtp:prepend(lazypath)
 
 --lets load plugins first lets add  a color scheme
 require("lazy").setup({
-    --catpuccin colorscheme
-    {"catppuccin/nvim", name= "catppuccin"},
+    -- tokyo night colorscheme
+    {"folke/tokyonight.nvim",lazy = false, priority = 1000},
     --file explorer plugin tree
     {"nvim-tree/nvim-tree.lua"},
     --telescope fuzzy finder 
@@ -99,9 +99,6 @@ require("lazy").setup({
             {"zbirenbaum/copilot.lua" },
             {"nvim-lua/plenary.nvim" },
         },
-        config = function ()
-            require("CopilotChat").setup({})
-        end,
     }, 
     --copilot completion source for nvim-cmp
     {

@@ -11,11 +11,15 @@
 │   │   ├── options.lua
 │   │   └── plugins.lua
 │   └── plugins
+│       ├── autopairs.lua
+│       ├── autotag.lua
 │       ├── bufferline.lua
 │       ├── cmp.lua
 │       ├── colorscheme.lua
+│       ├── copilot_chat.lua
 │       ├── copilot.lua
 │       ├── gitsigns.lua
+│       ├── indent_blackline.lua
 │       ├── lsp.lua
 │       ├── lualine.lua
 │       ├── nvim-tree.lua

@@ -1,4 +1,10 @@
 require("CopilotChat").setup({
+    window = {
+        title = function ()
+            local model = require("CopilotChat").get_config().model or "gpt-4.1"
+            return "CopilotChat- "  .. model
+        end,
+    }
   -- Default setup first
 })
 

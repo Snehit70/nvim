@@ -37,8 +37,13 @@ vim.keymap.set("v","<leader>ce", "<cmd>CopilotChatExplain<CR>", {desc ="Explain 
 vim.keymap.set("v","<leader>cr", "<cmd>CopilotChatReview<CR>", {desc ="Review selected code"})
 vim.keymap.set("v","<leader>cf", "<cmd>CopilotChatFix<CR>", {desc ="Fix selected code"})
 vim.keymap.set("v","<leader>co", "<cmd>CopilotChatOptimize<CR>", {desc ="Optimized selected code"})
+--vim.keymaps.set("n","<leader>cm","<cmd>CopilotChatModels<CR>",{desc = "Switch Copilot Chat Model"})
 
 
-
-
+-- Avante keymaps
+vim.keymap.set("n", "<leader>aa", function() require("avante.api").ask() end, { desc = "avante: ask" })
+vim.keymap.set("v", "<leader>ae", function() require("avante.api").edit() end, { desc = "avante: edit" })
+vim.keymap.set("n", "<leader>ar", function() require("avante.api").refresh() end, { desc = "avante: refresh" })
+vim.keymap.set("n", "<leader>af", function() require("avante.api").focus() end, { desc = "avante: focus" })
+vim.keymap.set("n", "<leader>at", function() require("avante").toggle() end, { desc = "avante: toggle" })
 

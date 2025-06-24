@@ -4,7 +4,7 @@ require("nvim-treesitter.configs").setup({
     },
     highlight = {
         enable = true, --turn on better syntax highlighting
-        additional_vim_regex_highlighting = false, --disable vim regex highlighting
+        additional_vim_regex_highlighting = true, --disable vim regex highlighting
     },
     indent = {
         enable = true, -- smarted indentation ( works well for most languages)

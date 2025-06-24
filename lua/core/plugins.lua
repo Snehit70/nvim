@@ -164,7 +164,9 @@ require("lazy").setup({
     {"alvan/vim-closetag"}, -- Auto-close HTML tags
     {"hail2u/vim-css3-syntax"}, -- Enhanced CSS3 syntax
     {"ap/vim-css-color"}, -- Preview CSS colors inline
-
+    
+    -- Enhanced git integration
+    {"tpope/vim-fugitive"}, -- Git commands in Neovim
 })
 
 

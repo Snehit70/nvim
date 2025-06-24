@@ -65,3 +65,9 @@ vim.keymap.set("n", "[x", function() require("avante.diff").prev_conflict() end,
 vim.keymap.set("n", "[[", function() require("avante.codeblocks").jump("prev") end, { desc = "avante: prev codeblock" })
 vim.keymap.set("n", "]]", function() require("avante.codeblocks").jump("next") end, { desc = "avante: next codeblock" })
 
+
+
+-- Git history and file exploration
+vim.keymap.set("n", "<leader>gl", "<cmd>Git log --oneline<CR>", {desc = "Git log"})
+vim.keymap.set("n", "<leader>gf", "<cmd>Git log --oneline -- %<CR>", {desc = "Git log for current file"})
+vim.keymap.set("n", "<leader>gh", "<cmd>0Gclog<CR>", {desc = "Git history for current file"})

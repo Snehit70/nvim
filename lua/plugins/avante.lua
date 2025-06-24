@@ -4,30 +4,16 @@ require("avante").setup({
     auto_suggestions_provider = "copilot",
     behaviour = {
         auto_suggestions = false,
-        auto_set_keymaps = false,
-        auto_apply_diff_after_generation = false,
-        support_paste_from_clipboard = false,
-    },
-    mappings = {
-        ask = "<leader>aa",
-        edit = "<leader>ae",
-        refresh = "<leader>ar",
-        focus = "<leader>af",
-        toggle = "<leader>at",
-        sidebar = {
-            switch_windows = "<Tab>",
-            reverse_switch_windows = "<S-Tab>",
-        },
     },
     windows = {
         position = "right",
         width = 30,
-        sidebar_header = {
-            enabled = true,
-            align = "center",
-            rounded = true,
+        input = {
+            border = "rounded",
         },
     },
+    system_prompt = "You are a coding instructor who help me learn code and not do things tha you are not explicitely told.",
+    -- For a better UI, you can use other providers, make sure you have the plugins installed
 })
 
 

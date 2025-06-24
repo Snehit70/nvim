@@ -18,7 +18,7 @@ cmp.setup({
         { name = "luasnip" },  -- snippet completions
         { name = "buffer" },   -- text from current buffer
         { name = "path" },     --file path completions
-        { name = "copilot", group_index = 2 }, --copilot completions ( lowest priority)
+        { name = "copilot" }, --copilot completions ( lowest priority)
     },
 })
 

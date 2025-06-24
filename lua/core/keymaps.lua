@@ -41,9 +41,27 @@ vim.keymap.set("v","<leader>co", "<cmd>CopilotChatOptimize<CR>", {desc ="Optimiz
 
 
 -- Avante keymaps
-vim.keymap.set("n", "<leader>aa", function() require("avante.api").ask() end, { desc = "avante: ask" })
-vim.keymap.set("v", "<leader>ae", function() require("avante.api").edit() end, { desc = "avante: edit" })
-vim.keymap.set("n", "<leader>ar", function() require("avante.api").refresh() end, { desc = "avante: refresh" })
-vim.keymap.set("n", "<leader>af", function() require("avante.api").focus() end, { desc = "avante: focus" })
-vim.keymap.set("n", "<leader>at", function() require("avante").toggle() end, { desc = "avante: toggle" })
+vim.keymap.set("n", "<leader>aa", ":AvanteAsk<CR>", { desc = "avante: ask" })
+vim.keymap.set("v", "<leader>ae", ":AvanteEdit<CR>", { desc = "avante: edit" })
+vim.keymap.set("n", "<leader>ar", ":AvanteRefresh<CR>", { desc = "avante: refresh" })
+vim.keymap.set("n", "<leader>af", ":AvanteFocus<CR>", { desc = "avante: focus" })
+vim.keymap.set("n", "<leader>at", ":AvanteToggle<CR>", { desc = "avante: toggle" })
+vim.keymap.set("n", "<leader>a?", ":AvanteModels<CR>", { desc = "avante: select model" })
+vim.keymap.set("n", "<leader>aS", ":AvanteStop<CR>", { desc = "avante: stop" })
+vim.keymap.set("n", "<leader>ah", ":AvanteHistory<CR>", { desc = "avante: history" })
+vim.keymap.set("n", "<leader>aB", ":AvanteBuild<CR>", { desc = "avante: add all buffers" })
+
+-- Diffs
+vim.keymap.set("n", "co", function() require("avante.diff").choose("ours") end, { desc = "avante: choose ours" })
+vim.keymap.set("n", "ct", function() require("avante.diff").choose("theirs") end, { desc = "avante: choose theirs" })
+vim.keymap.set("n", "ca", function() require("avante.diff").choose_all("theirs") end, { desc = "avante: choose all theirs" })
+vim.keymap.set("n", "c0", function() require("avante.diff").choose("none") end, { desc = "avante: choose none" })
+vim.keymap.set("n", "cb", function() require("avante.diff").choose_both() end, { desc = "avante: choose both" })
+vim.keymap.set("n", "cc", function() require("avante.diff").choose_cursor() end, { desc = "avante: choose cursor" })
+vim.keymap.set("n", "]x", function() require("avante.diff").next_conflict() end, { desc = "avante: next conflict" })
+vim.keymap.set("n", "[x", function() require("avante.diff").prev_conflict() end, { desc = "avante: prev conflict" })
+
+-- Codeblocks
+vim.keymap.set("n", "[[", function() require("avante.codeblocks").jump("prev") end, { desc = "avante: prev codeblock" })
+vim.keymap.set("n", "]]", function() require("avante.codeblocks").jump("next") end, { desc = "avante: next codeblock" })
 

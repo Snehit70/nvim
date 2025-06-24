@@ -22,6 +22,7 @@ Welcome to my personal Neovim setup! This configuration is tailored for an enhan
 │       ├── copilot_chat.lua # AI-powered chat assistant
 │       ├── copilot.lua      # AI code suggestions
 │       ├── gitsigns.lua     # Git integration
+│       ├── html_snippets.lua # HTML snippets for rapid development
 │       ├── indent_blackline.lua # Visual indentation guides
 │       ├── lsp.lua          # Language Server Protocol setup
 │       ├── lualine.lua      # Statusline customization
@@ -41,6 +42,7 @@ Ensure Neovim is installed and accessible via your terminal:
 ```
 nvim -v
 ```
+If you don't have Neovim installed, download it from [Neovim's official website](https://neovim.io/).
 
 ### Installation Steps
 
@@ -67,9 +69,22 @@ nvim -v
 ### Features Overview
 
 - **Lazy.nvim Plugin Manager**: Efficiently manages plugins.
-- **Pre-configured Plugins**: Enhance productivity with tools like Telescope, Treesitter, Lualine, and more.
-- **Language Server Protocol (LSP)**: Provides intelligent code completion, diagnostics, and more.
-- **AI Assistance**: Integrated Copilot for code suggestions and chat-based coding.
-- **Custom Keymaps**: Simplified keybindings for faster navigation and actions.
+- **Pre-configured Plugins**: Enhance productivity with tools like Telescope for fuzzy searching, Treesitter for better syntax highlighting, and Lualine for statusline customization.
+- **Language Server Protocol (LSP)**: Provides intelligent code completion, diagnostics, and refactoring support.
+- **AI Assistance**: Integrated Copilot for code suggestions and Copilot Chat for interactive coding help.
+- **Custom Keymaps**: Simplified and intuitive keybindings for faster navigation and actions.
+- **HTML Enhancers**: Plugins like Emmet for HTML/CSS tag expansion and vim-closetag for auto-closing HTML tags.
+- **Git Integration**: Visualize and manage Git changes directly in Neovim.
+- **Markdown Preview**: Instantly preview Markdown files within Neovim.
+- **Avante.nvim**: A productivity-focused plugin with advanced interaction features.
+- **HTML Snippets**: Rapid development using predefined snippets for HTML.
+- **Indent Guides**: Enhanced visual guides for indentation with `Indent-Blankline`.
+- **Window Management**: Seamlessly arrange windows using `WinShift`.
+
+### Troubleshooting
+
+- **Plugin Installation Issues**: Ensure you have a working internet connection and the `git` command is available.
+- **Error Messages**: Run `:checkhealth` in Neovim to diagnose issues and identify missing dependencies.
+- **Markdown Preview Not Working**: Verify Node.js is installed on your system, as it's required for the `markdown-preview.nvim` plugin.
 
 Enjoy coding with this custom Neovim setup! Feel free to explore and modify it to suit your needs.

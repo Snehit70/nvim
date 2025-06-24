@@ -158,6 +158,12 @@ require("lazy").setup({
             },
         },
     },
+    --html enhancers
+    {"mattn/emmet-vim"}, -- Essential for HTML/CSS - provides tag expansion
+    {"AndrewRadev/tagalong.vim"}, -- Automatically rename closing HTML tags
+    {"alvan/vim-closetag"}, -- Auto-close HTML tags
+    {"hail2u/vim-css3-syntax"}, -- Enhanced CSS3 syntax
+    {"ap/vim-css-color"}, -- Preview CSS colors inline
 
 })
 

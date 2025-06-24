@@ -13,7 +13,7 @@ require("copilot").setup({
     },
 
     suggestion = {
-        enabled = true,
+        enabled = false,
         auto_trigger = true,
         hide_during_completion = true,
         debounce = 75,
@@ -42,7 +42,7 @@ require("copilot").setup({
 })
 
 --function to toggle copilot suggestions
-local copilot_enabled = true
+local copilot_enabled =false
 function ToggleCopilot()
     if copilot_enabled then
         vim.cmd("Copilot disable")

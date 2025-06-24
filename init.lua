@@ -31,3 +31,4 @@ require("plugins.autotag") -- Auto-closes and renames HTML tags.
 require("plugins.autopairs") -- Auto-closes brackets and quotes.
 require("plugins.copilot_chat") -- Chat-based coding assistant.
 require("plugins.avante") -- Custom plugin tailored to specific needs.
+require("plugins.html_snippets")

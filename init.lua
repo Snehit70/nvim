@@ -32,3 +32,5 @@ require("plugins.autopairs") -- Auto-closes brackets and quotes.
 require("plugins.copilot_chat") -- Chat-based coding assistant.
 require("plugins.avante") -- Custom plugin tailored to specific needs.
 require("plugins.html_snippets")
+require("plugins.jinja_snippets") -- Jinja2 snippets for templating.
+require("plugins.terminal_enhanced")

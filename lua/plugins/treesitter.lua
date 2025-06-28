@@ -1,6 +1,17 @@
 require("nvim-treesitter.configs").setup({
     ensure_installed = {
-        "lua","python","javascript","html","css","bash","json","yaml","bash","json","yaml","markdown","vim","vimdoc"
+        "lua",
+        "python",
+        "javascript",
+        "html",
+        "css",
+        "bash",
+        "json",
+        "yaml",
+        "markdown",
+        "vim",
+        "vimdoc",
+        --"jinja2",
     },
     highlight = {
         enable = true, --turn on better syntax highlighting

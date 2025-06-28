@@ -45,11 +45,11 @@ require("lazy").setup({
     {"hrsh7th/cmp-nvim-lsp"}, --allow lsp results as suggestions
 
     --snippet engine
-    {"L3MON4D3/LUASnip"},  --snippet engine
-    {"saadparwaiz1/cmp_luasnip" }, -- lua snip to integrate nvim-cmp
+    {"L3MON4D3/LUASnip", event = "InsertEnter"},  --snippet engine
+    {"saadparwaiz1/cmp_luasnip", event = "InsertEnter"}, -- lua snip to integrate nvim-cmp
 
     --git indicators in sign column
-    {"lewis6991/gitsigns.nvim"},
+    {"lewis6991/gitsigns.nvim", event = "BufReadPre"},
 
     --keybinding helper
     {"folke/which-key.nvim" },
@@ -95,6 +95,7 @@ require("lazy").setup({
     {
         "CopilotC-Nvim/CopilotChat.nvim",
         branch = "main",
+        cmd = { "CopilotChat", "CopilotChatExplain", "CopilotChatReview", "CopilotChatFix", "CopilotChatOptimize" },
         dependencies = {
             {"zbirenbaum/copilot.lua" },
             {"nvim-lua/plenary.nvim" },
@@ -142,7 +143,6 @@ require("lazy").setup({
     {
         "yetone/avante.nvim",
         event = "VeryLazy",
-        lazy = false,
         version = false,
         build = "make",
         dependencies = {

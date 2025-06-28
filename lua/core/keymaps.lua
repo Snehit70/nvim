@@ -4,19 +4,6 @@
 --toggle nvim-tree wiht <leader> e
 vim.keymap.set("n","<leader>e",":NvimTreeToggle<CR>",{ desc = "Toggle File explorer"})
 
---toggle terminal horizontally with <leader>tt
-vim.keymap.set("n","<leader>tt","<cmd>ToggleTerm direction=horizontal<CR>", { desc = "Toggle horizontal terminal" })
-
---toggle terminal as floating window with <leader>tf
-vim.keymap.set("n","<leader>tf","<cmd>ToggleTerm direction=float<CR>", { desc = "Toggle floating terminal" })
-
---toggle terminal vetically with <leader>tv
-vim.keymap.set("n","<leader>tv","<cmd>ToggleTerm direction=vertical<CR>", { desc = "Toggle  vertical terminal" })
-
---make <ESC> work lik ctrl-\ ctrl-n in terminal mode
-vim.keymap.set("t","<Esc>", [[<C-\><C-n>]], {desc = "Exit terminal mode"})
-
-
 --keymap for markdown preview
 vim.keymap.set("n","<leader>mp","<cmd>MarkdownPreviewToggle<CR>", {desc = "Toggle Markdown Preview" })
 
@@ -71,3 +58,33 @@ vim.keymap.set("n", "]]", function() require("avante.codeblocks").jump("next") e
 vim.keymap.set("n", "<leader>gl", "<cmd>Git log --oneline<CR>", {desc = "Git log"})
 vim.keymap.set("n", "<leader>gf", "<cmd>Git log --oneline -- %<CR>", {desc = "Git log for current file"})
 vim.keymap.set("n", "<leader>gh", "<cmd>0Gclog<CR>", {desc = "Git history for current file"})
+
+
+
+-- Enhanced terminal keymaps (replace your existing ones)
+vim.keymap.set("n", "<leader>tt", "<cmd>lua toggle_horizontal_terminal()<CR>", { desc = "Toggle horizontal terminal" })
+vim.keymap.set("n", "<leader>tv", "<cmd>lua toggle_vertical_terminal()<CR>", { desc = "Toggle vertical terminal" })
+vim.keymap.set("n", "<leader>tf", "<cmd>lua toggle_float_terminal()<CR>", { desc = "Toggle floating terminal" })
+
+-- Focus terminal (like Avante's focus feature)
+vim.keymap.set("n", "<leader>tF", "<cmd>lua focus_terminal()<CR>", { desc = "Focus terminal" })
+
+-- Send current line to terminal
+vim.keymap.set("n", "<leader>ts", function()
+    local line = vim.api.nvim_get_current_line()
+    send_to_terminal(line .. "\n")
+end, { desc = "Send current line to terminal" })
+
+-- Send selected text to terminal
+vim.keymap.set("v", "<leader>ts", function()
+    local start_pos = vim.fn.getpos("'<")
+    local end_pos = vim.fn.getpos("'>")
+    local lines = vim.fn.getline(start_pos[2], end_pos[2])
+    local text = table.concat(lines, "\n")
+    send_to_terminal(text .. "\n")
+end, { desc = "Send selection to terminal" })
+
+-- Quick terminal commands
+vim.keymap.set("n", "<leader>tc", function()
+    send_to_terminal("clear\n")
+end, { desc = "Clear terminal" })

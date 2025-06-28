@@ -19,6 +19,7 @@ require("mason-lspconfig").setup({
         "jsonls",       --json server with schema validation
         "bashls",       --bash server for shell script
         "marksman",     --markdown server
+        "jinja_lsp",      --jinja2 templating language server
 
     },
     --this automatically sets up servers with default config
@@ -128,4 +129,13 @@ lspconfig.bashls.setup({
 lspconfig.marksman.setup({
     capabilities = capabilities,
     on_attach = on_attach,
+})
+
+
+
+-- Jinja2 template server
+lspconfig.jinja_lsp.setup({
+    capabilities = capabilities,
+    on_attach = on_attach,
+    filetypes = { "jinja", "jinja2", "j2", "html.jinja", "html.j2","html" },
 })
